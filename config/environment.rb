@@ -22,7 +22,6 @@ def migrate_db
   Dir[File.join(File.dirname(__FILE__), "../db/migrate", "*.rb")].each do |f| 
     require f
     migration = Kernel.const_get(f.split("/").last.split(".rb").first.gsub(/\d+/, "").split("_").collect{|w| w.strip.capitalize}.join())
-    binding.pry
     migration.migrate(:up)
   end
 end
