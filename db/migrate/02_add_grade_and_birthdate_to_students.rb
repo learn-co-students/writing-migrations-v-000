@@ -1,4 +1,4 @@
-class CreateStudents < ActiveRecord::Migration
+class AddGradeAndBirthdateToStudents < ActiveRecord::Migration
   def up
   end
 
@@ -6,9 +6,7 @@ class CreateStudents < ActiveRecord::Migration
   end
 
   def change
-    add_column :students do |t|
-      t.integer :grade
-      t.string :birthdate
-    end
+    add_column :students, :grade, :integer
+    add_column :students, :birthdate, :text
   end
 end
