@@ -1,6 +1,9 @@
 require 'active_record'
 include ActiveRecord::Tasks
 
+#require 'sinatra/activerecord/rake'
+#above require removed after downloaded code not working properly
+
 DatabaseTasks.db_dir = 'db'
 DatabaseTasks.migrations_paths = ['db/migrate']
 
@@ -15,6 +18,7 @@ task :environment do
 end
 
 Rake::Task["db:drop"].clear
+
 
 namespace :db do
   task :drop => :environment do
