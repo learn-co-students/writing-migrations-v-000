@@ -1,15 +1,16 @@
 class CreateStudents < ActiveRecord::Migration
-  def up
-  end
 
-  def down
-  end
+
   def change
     create_table :students do |t|
       t.string :name
-      #t.string :genre
-      #t.integer :age
-      #t.string :hometown
     end
   end
+
 end
+
+
+
+
+#change class name
+#each add_column is its own line
