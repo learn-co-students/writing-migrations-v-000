@@ -5,3 +5,4 @@ class ChangeDatatypeForBirthdate < ActiveRecord::Migration
   end
 
 end
+# Changing datatype from :string to :datetime. running rake db:migrate again, updates schema.rb
