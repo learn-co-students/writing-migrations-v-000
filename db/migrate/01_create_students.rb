@@ -5,4 +5,15 @@ class CreateStudents < ActiveRecord::Migration
       t.string :name
     end
   end
+
+
 end
+
+=begin
+sql = <<-SQL
+CREATE TABLE IF NOT EXISTS students (
+  id INTEGER PRIMARY KEY,
+  name TEXT
+)
+SQL
+=end
