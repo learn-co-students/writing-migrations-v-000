@@ -1,7 +1,7 @@
 class CreateStudents < ActiveRecord::Migration[4.2]
   def change
-    create_table :students do |s|
-      s.string :name
+    change_column :students do |s|
+      s.datetime :birthdate
     end
   end
 end
