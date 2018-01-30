@@ -14,7 +14,6 @@
 
    create_table "students", force: :cascade do |t|
      t.string "name"
-     t.string "type"
      t.integer "grade"
      t.datetime "birthdate"
    end
