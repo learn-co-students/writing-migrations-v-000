@@ -10,7 +10,8 @@ DBRegistry[ENV["SCHOOL_ENV"]].connect!
 DB = ActiveRecord::Base.connection
 
 if ENV["SCHOOL_ENV"] == "test"
-  ActiveRecord::Migration.verbose = false
+  # I wanna see the migration output!
+  # ActiveRecord::Migration.verbose = false
 end
 
 def drop_db
