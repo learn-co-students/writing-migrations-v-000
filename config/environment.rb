@@ -7,6 +7,7 @@ Dir[File.join(File.dirname(__FILE__), "../lib/support", "*.rb")].each {|f| requi
 ENV["SCHOOL_ENV"] ||= "development"
 
 DBRegistry[ENV["SCHOOL_ENV"]].connect!
+
 DB = ActiveRecord::Base.connection
 
 if ENV["SCHOOL_ENV"] == "test"
