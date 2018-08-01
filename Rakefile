@@ -19,7 +19,6 @@ Rake::Task["db:drop"].clear
 namespace :db do
   task :drop => :environment do
     puts "Dropping tables"
-    File.delete('db/schema.rb')
-    drop_db
+    system("rm db/school-development.db && rm db/school-test.db && rm db/schema.rb")
   end
 end
