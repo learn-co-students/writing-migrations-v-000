@@ -1,8 +1,12 @@
 require 'bundler/setup'
 Bundler.require
+#Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
+#Dir[File.join(File.dirname(__FILE__), "../lib/support", "*.rb")].each {|f| require f}
+#Dir[File.join(File.dirname(__FILE__), "../lib/**/*.rb")].each { |f| require f }
+#Dir[File.join(File.dirname(__FILE__), "../app/**/*.rb")].each { |f| require f }
 
-Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
-Dir[File.join(File.dirname(__FILE__), "../lib/support", "*.rb")].each {|f| require f}
+#require_all 'lib', 'app'
+require_rel '../lib/support/connection_adapter.rb', '../app/models/student.rb', '../lib/support/db_registry.rb'
 
 ENV["SCHOOL_ENV"] ||= "development"
 
