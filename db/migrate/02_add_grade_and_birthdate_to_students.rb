@@ -1,11 +1,7 @@
-class CreateStudents < ActiveRecord::Migration[5.1]
 
-  def add_column
-    create_table :students do |t|
-      t.string :lastname
-      t.string :sports
-      t.integer :favbook
-      t.string :favfood
-    end
+class AddGradeAndBirthdateToStudents < ActiveRecord::Migration[5.1]
+  def change
+    add_column :students, :grade, :integer
+    add_column :students, :birthdate, :string
   end
 end
