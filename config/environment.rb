@@ -18,3 +18,14 @@ def drop_db
     DB.execute("DROP TABLE #{table}")
   end
 end
+
+#sql = <<-SQL
+#CREATE TABLE IF NOT EXISTS students(
+#  id INTEGER PRIMARY KEY,
+#  name TEXT,
+#  age INTEGER
+#);
+#SQL
+#
+#ActiveRecord::Base.connection.execute(sql)
+#require_relative '../app/models/student.rb'

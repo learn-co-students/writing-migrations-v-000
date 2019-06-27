@@ -1,6 +1,8 @@
 require 'active_record'
 include ActiveRecord::Tasks
 
+#require 'sinatra/activerecord/rake'
+
 DatabaseTasks.db_dir = 'db'
 DatabaseTasks.migrations_paths = ['db/migrate']
 
